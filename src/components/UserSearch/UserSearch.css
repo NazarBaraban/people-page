@@ -1,0 +1,27 @@
+.user-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 36px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.search-input {
+  flex-grow: 1;
+}
+
+.sort-controls {
+  margin-left: auto;
+}
+
+.sort-label {
+  font-weight: bold;
+}
+
+.sort-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
