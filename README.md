@@ -1,5 +1,6 @@
 # Demo version
 
+[DEMO](https://people-table-test.netlify.app)
 
 # Мій проект
 

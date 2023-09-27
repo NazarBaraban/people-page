@@ -9,8 +9,6 @@ import AlbumPhotos from './components/UserDetails/AlbumPhotos';
 
 export const App = () => {
   const [users, setUsers] = useState([]);
-  const [posts, setPosts] = useState([]);
-  const [albums, setAlbums] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
 
@@ -30,24 +28,6 @@ export const App = () => {
       })
       .catch((error) => {
         console.error('Error fetching users:', error);
-      });
-
-    axios
-      .get('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => {
-        setPosts(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching posts:', error);
-      });
-
-    axios
-      .get('https://jsonplaceholder.typicode.com/albums')
-      .then((response) => {
-        setAlbums(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching albums:', error);
       });
   }, []);
 
@@ -82,9 +62,9 @@ export const App = () => {
           />
           <Route
             path="/user/:userId"
-            element={<UserDetail users={users} posts={posts} albums={albums} />}
+            element={<UserDetail/>}
           />
-          <Route path="/post/:postId" element={<PostDetail posts={posts} />} />
+          <Route path="/post/:postId" element={<PostDetail />} />
           <Route path="/album/:albumId" element={<AlbumPhotos/>} />
         </Routes>
       </div>
